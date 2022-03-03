@@ -36,9 +36,9 @@ action_endpoint:
 # https://rasa.com/docs/rasa/event-brokers
 
 event_broker:
-  url: https://rabbit-15672-testbedelk-sealedhermit.cloud.okteto.net/
+  url: "https://rabbit-15672-testbedelk-sealedhermit.cloud.okteto.net/"
   username: guest
-  password: guest
+  password: $guest
   queues:
      - rasa_production_events
      - elk_log
