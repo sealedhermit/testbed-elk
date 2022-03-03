@@ -1,0 +1,68 @@
+version: '3.4'
+services:
+
+  rasa:
+    image: rasa-server-okteto:latest
+    working_dir: /app
+    build: './'
+    restart: always
+    volumes:
+    - ./actions:/app/actions
+    - ./data:/app/data
+    - ./tests:/app/tests
+    command: bash -c "rm -rf models/* && rasa train && rasa run --enable-api --cors \"*\" --debug"
+    ports:
+    - '5006:5005'
+    depends_on:
+    - rasa-actions
+    public: true
+    env_file: .env
+    networks:
+    - all
+
+  rasa-actions:
+    image: rasa-server-okteto:latest
+    working_dir: /app
+    build: './'
+    restart: always
+    volumes:
+    - ./actions:/app/actions
+    command: bash -c "rasa run actions"
+    ports:
+    - '5055:5055'
+    env_file: .env
+    networks:
+    - all
+  elasticsearch:
+    image: elasticsearch:7.9.2
+    ports:
+      - '9200:9200'
+    environment:
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+  kibana:
+    image: kibana:7.9.2
+    ports:
+      - '5601:5601'
+
+
+  logstash:
+    image: logstash:7.9.2
+    ports:
+      - '5000:5000'
+    volumes:
+    - ./logstash_pipeline:/usr/share/logstash/pipeline
+
+      #- type: bind
+        #source: ./logstash_pipeline/
+        #target: /usr/share/logstash/pipeline
+    read_only: true
+
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable.ipv6: "true"

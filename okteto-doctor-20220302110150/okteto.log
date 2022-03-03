@@ -1,0 +1,80 @@
+time="2022-03-02T10:10:29+05:30" level=info msg="Language guesses: \r\n 100.00%\tPython\n" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:30+05:30" level=info msg="language 'python' inferred for your current directory" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:30+05:30" level=info msg="Terminal: &{{21760 5 191 35387 0 [3 28 127 21 4 0 1 0 17 19 26 0 18 15 23 22 0 0 0] 0 0}}" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:30+05:30" level=info msg="activating development container retry=false" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:31+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:34+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:34+05:30" level=info msg="image 'okteto.dev/rasa-server-okteto:latest' not found, building it: not found" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:34+05:30" level=info msg="building dev image tag okteto.dev/rasa-server-okteto:latest" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:34+05:30" level=info msg="building your image on tcp://buildkit.cloud.okteto.net:1234" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:34+05:30" level=info msg="could not detect any .dockerignore on /home/vidhun/Documents/amber/testbed-airtable" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:54+05:30" level=info msg="Failed to build image: build failed: failed to get status: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:54+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:10:55+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=fb704304-8510-4c6e-bbd9-8930ed4d2ddf version=1.15.5
+time="2022-03-02T10:20:13+05:30" level=info msg="'.stignore' exists in folder '/home/vidhun/Documents/amber/testbed-airtable'" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:13+05:30" level=info msg="Terminal: &{{21760 5 191 35387 0 [3 28 127 21 4 0 1 0 17 19 26 0 18 15 23 22 0 0 0] 0 0}}" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:13+05:30" level=info msg="activating development container retry=false" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:14+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:16+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:16+05:30" level=info msg="image 'okteto.dev/rasa-server-okteto:latest' not found, building it: not found" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:16+05:30" level=info msg="building dev image tag okteto.dev/rasa-server-okteto:latest" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:16+05:30" level=info msg="building your image on tcp://buildkit.cloud.okteto.net:1234" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:16+05:30" level=info msg="could not detect any .dockerignore on /home/vidhun/Documents/amber/testbed-airtable" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:36+05:30" level=info msg="Failed to build image: build failed: failed to dial gRPC: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:36+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:37+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:37+05:30" level=info msg="Failed to build image: build failed: failed to dial gRPC: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:37+05:30" level=info msg="starting shutdown sequence" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:38+05:30" level=info msg="sent cancellation signal" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:38+05:30" level=info msg="stopping forwarders" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:38+05:30" level=info msg="completed shutdown sequence" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:38+05:30" level=info msg="activate failed with: error building dev image: error building image 'registry.cloud.okteto.net/elkintegration-sealedhermit/rasa-server-okteto:latest': build failed: failed to dial gRPC: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:38+05:30" level=info msg="waiting for shutdown sequence to finish" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:38+05:30" level=info msg="activating development container retry=false" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:38+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:39+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:39+05:30" level=info msg="image 'okteto.dev/rasa-server-okteto:latest' not found, building it: not found" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:39+05:30" level=info msg="building dev image tag okteto.dev/rasa-server-okteto:latest" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:39+05:30" level=info msg="building your image on tcp://buildkit.cloud.okteto.net:1234" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:39+05:30" level=info msg="could not detect any .dockerignore on /home/vidhun/Documents/amber/testbed-airtable" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:59+05:30" level=info msg="Failed to build image: build failed: failed to get status: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:20:59+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:00+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:00+05:30" level=info msg="Failed to build image: build failed: failed to get status: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:00+05:30" level=info msg="starting shutdown sequence" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:01+05:30" level=info msg="sent cancellation signal" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:01+05:30" level=info msg="stopping forwarders" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:01+05:30" level=info msg="completed shutdown sequence" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:01+05:30" level=info msg="activate failed with: error building dev image: error building image 'registry.cloud.okteto.net/elkintegration-sealedhermit/rasa-server-okteto:latest': build failed: failed to get status: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:01+05:30" level=info msg="waiting for shutdown sequence to finish" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:01+05:30" level=info msg="activating development container retry=false" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:01+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:02+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:02+05:30" level=info msg="image 'okteto.dev/rasa-server-okteto:latest' not found, building it: not found" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:02+05:30" level=info msg="building dev image tag okteto.dev/rasa-server-okteto:latest" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:02+05:30" level=info msg="building your image on tcp://buildkit.cloud.okteto.net:1234" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:02+05:30" level=info msg="could not detect any .dockerignore on /home/vidhun/Documents/amber/testbed-airtable" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:22+05:30" level=info msg="Failed to build image: build failed: failed to get status: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:22+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:23+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:23+05:30" level=info msg="Failed to build image: build failed: failed to dial gRPC: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:23+05:30" level=info msg="starting shutdown sequence" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:23+05:30" level=info msg="sent cancellation signal" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:23+05:30" level=info msg="stopping forwarders" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:23+05:30" level=info msg="completed shutdown sequence" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:23+05:30" level=info msg="activate failed with: error building dev image: error building image 'registry.cloud.okteto.net/elkintegration-sealedhermit/rasa-server-okteto:latest': build failed: failed to dial gRPC: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:23+05:30" level=info msg="waiting for shutdown sequence to finish" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:23+05:30" level=info msg="activating development container retry=false" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:21:24+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=bf9114bc-84f8-47b2-a931-64d37166a21e version=1.15.5
+time="2022-03-02T10:42:30+05:30" level=info msg="'.stignore' exists in folder '/home/vidhun/Documents/amber/testbed-airtable'" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:30+05:30" level=info msg="Terminal: &{{21760 5 191 35387 0 [3 28 127 21 4 0 1 0 17 19 26 0 18 15 23 22 0 0 0] 0 0}}" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:31+05:30" level=info msg="activating development container retry=false" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:32+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:34+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:34+05:30" level=info msg="image 'okteto.dev/rasa-server-okteto:latest' not found, building it: not found" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:34+05:30" level=info msg="building dev image tag okteto.dev/rasa-server-okteto:latest" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:34+05:30" level=info msg="building your image on tcp://buildkit.cloud.okteto.net:1234" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:34+05:30" level=info msg="could not detect any .dockerignore on /home/vidhun/Documents/amber/testbed-airtable" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:54+05:30" level=info msg="Failed to build image: build failed: failed to get status: rpc error: code = Unavailable desc = connection error: desc = \"transport: error while dialing: dial tcp 35.225.244.83:1234: i/o timeout\"" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:54+05:30" level=debug msg="calling registry registry.cloud.okteto.net" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5
+time="2022-03-02T10:42:57+05:30" level=debug msg="error: GET https://registry.cloud.okteto.net/v2/elkintegration-sealedhermit/rasa-server-okteto/manifests/latest: MANIFEST_UNKNOWN: manifest unknown; map[Tag:latest]" action=87a3706e-cff2-4088-8128-e64f5eac3470 version=1.15.5

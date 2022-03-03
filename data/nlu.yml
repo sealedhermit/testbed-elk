@@ -1,0 +1,242 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you a bot
+- intent: chitchat/ask_name
+  examples: |
+    - what is your name?
+    - Who are you?
+    - Can i know your name?
+    - What does everyone call you?
+- intent: chitchat/ask_location
+  examples: |
+    - where do you live?
+    - Where is your home?
+    - What's your location?
+- intent: chitchat/ask_random
+  examples: |
+    - hmm..
+    - sigh
+    - sing me a song
+    - hihi
+    - haha
+    - fuck
+    - you suck
+    - you are bad
+    - i don't like you
+- intent: tell_need
+  examples: |
+    - i want a product
+    - help me purchase a product
+    - suggest me a product
+    - i want to buy a product
+- intent: product_type
+  examples: |
+    - I want to buy a [phone](category)
+    - i would like to buy a [phone](category)
+    - can you suggest me a good [mobile]{"entity": "category", "value": "phone"}
+    - please recommend me a good [smartphone]{"entity": "category", "value": "phone"}
+    - i want to purchase a [phone](category)
+    - i am interested in buying a [smartphone]{"entity": "category", "value": "phone"}
+    - i wanna purchase a [phone]({"entity": "category", "value": "phone"}
+    - [phone](category)
+    - i want to buy a [phone](category)
+    - i want a [phone](category) priced under [40000 rupees](price)
+    - i need a [phone](category) with OLED display
+    - suggest me a good [tablet](category)
+    - i want to buy a android [laptop](category)
+    - [tablet](category)
+    - i need to purchase a [tablet](category)
+    - i need a good [tablet](category)
+    - help me pick a good [tablet](category)
+    - i want a [phone](category)
+    - i need a [tablet](category) for my online class
+    - i am looking to buy a [tablet](category) for watching movies
+    - i need a [tablet](category)
+    - i want a [tablet](category)
+    - i need a [phone](category)
+    - i need a [tablet](category)
+- intent: product_budget
+  examples: |
+    - [25000](price)
+    - my budget is [10000 rupees](price)
+    - [20000 rupees](price)
+    - My budget is [25000 rupees](price)
+    - i can spent [10000 rs](price)
+    - i have [15000rs](price) to spend
+    - suggest me a phone under [20000rs](price)
+    - [10000rs](price)
+    - [rs 10000](price)
+    - [20000 Rs](price)
+    - [Rs 20000](price)
+    - [10,000 rs](price)
+    - [20000 rs](price)
+    - [10000 rupees](price)
+    - [40000 rupees](price)
+    - [40000](price)
+    - [10000](price)
+    - my budget is [40000 rupees](price)
+    - my budget is [80000](price) rupees
+    - i can spend up to [100000] rupees
+    - [rs 50000](price)
+    - i need a [phone](category) [priced under 20000](price) with [8gb](ram) ram and [128gb storage](storage)
+    - a phone [priced under 20000](price)
+    - i need a [tablet](category) [priced under](price) [20000 rs](price)
+    - i need a [tablet](category) [priced](price) under [rs](price) [20000](price) with [64gb storage](storage) and [4gb ram](ram)
+    - i want to purchase a [tablet](category) priced within [rs](price) [30000](price)
+    - i am looking for a [phone](category) priced under [rs 20000](price)
+    - i am looking for a [phone](category) priced under [Rs 20000](price)
+    - i am looking for a [phone](category) priced under [20000 rs](price)
+    - i am looking for a [phone](category) priced under [20000 Rs](price)
+    - i am looking for a [phone](category) priced under [Rupees 20000](price)
+    - i want to purchase a [tablet](category) under [30000rs](price)
+    - i want to purchase a [tablet](category) under [30000 rs](price)
+    - i want to purchase a [tablet](category) under [30000 Rs](price)
+    - i want to purchase a [tablet](category) under [rs 30000](price)
+    - i want to purchase a [tablet](category) under [Rs 30000](price)
+    - i want to purchase a [tablet](category) under [30000 rupees](price)
+    - i need a [phone](category) under [40000 rs](price)
+    - [20000rs](price)
+- intent: product_camera
+  examples: |
+    - [64 megapixel camera](camera)
+    - i am looking for a [32 megapixel camera](camera)
+    - show me phones with [48 megapixel camera](camera)
+    - [48mp camera](camera)
+    - [13MP](camera)
+    - [13](camera)
+    - [12MP camera](camera)
+    - [48](camera)
+    - [64](camera)
+    - [108](camera)
+    - [13mp](camera)
+    - [48mp](camera)
+    - [64mp](camera)
+    - [108mp](camera)
+    - i want atleast [48mp](camera) camera
+    - [48 megapixel](camera)
+    - ineed atleast [48 megapixel camera](camera)
+    - [48 mp](camera)
+- intent: product_ram
+  examples: |
+    - [8 GB RAM](ram)
+    - i am looking for [8 GB RAM](ram)
+    - [4GB RAM](ram)
+    - i need [6GB ram](ram)
+    - [6gb](ram)
+    - [4GB](ram)
+    - [8 GB](ram)
+    - [4 gb](ram)
+    - i need atleast [4gb ram](ram)
+    - i want [4GB ram](ram)
+    - [4](ram)
+    - [6](ram)
+    - [8](ram)
+    - [12](ram)
+    - [4gb](ram)
+    - [6GB](ram)
+    - [8Gb](ram)
+    - i want [4gb](ram) ram
+    - [8GB RAM](ram)
+    - i need a [phone](category) with [8GB RAM](ram)
+    - i need a [tablet](category) with [6GB RAM](ram)
+    - [4gb](ram)
+- intent: product_storage
+  examples: |
+    - [128GB storage](storage)
+    - [64GB ROM](storage)
+    - [256GB](storage)
+    - i prefer atleast [32GB inbuilt storage](storage)
+    - [32Gb storage](storage)
+    - [64GB](storage)
+    - [128gb](storage)
+    - [128Gb](storage)
+    - i need [64gb](storage) storage
+    - [128 gb](storage) ROM
+    - [128 Gb](storage) memory
+    - i need a [phone](category) with atleast [128GB storage](storage)
+    - [128GB](storage)
+    - i want [128gb storage](storage)
+    - i want a [phone](category) with [8gb](ram) ram and [128gb storage](storage)
+    - i want atleast [512GB](storage) ssd
+    - i want [1024GB](storage) storage
+    - i require atleast [256GB]storage
+    - [64gb](storage)
+    - [64gb](storage)
+- intent: product_battery
+  examples: |
+    - [5000mAh battery](battery)
+    - [4500mah](battery)
+    - i need atleast [5000mah](battery)
+    - i want [6000mAh battery](battery)
+    - [4000mah](battery)
+    - [4000MAH](battery)
+    - i need [4500mah battery](battery)
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - please stop
+    - i want to stop
+    - stop the form
+    - i am not interested
+    - i don't want to continue
+- intent: affirm
+  examples: |
+    - yes
+    - ya
+    - yeah
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - /affirm
+- intent: not_applicable
+  examples: |
+    - not applicable
+    - na
+    - skip
+    - skip it
+- intent: out_of_scope
+  examples: |
+    - Who is the prime minister of India
+    - hahahahaaha
+    - i love you
+    - carrot
+- synonym: phone
+  examples: |
+    - mobile
+    - smartphone

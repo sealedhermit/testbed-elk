@@ -1,0 +1,130 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- product_storage
+- product_ram
+- affirm
+- greet
+- product_budget
+- product_type
+- chitchat:
+    is_retrieval_intent: true
+- product_battery
+- product_camera
+- deny
+- stop
+- bot_challenge
+- goodbye
+- not_applicable
+- out_of_scope
+entities:
+- battery
+- camera
+- category
+- price
+- ram
+- storage
+slots:
+  category:
+    type: text
+    influence_conversation: true
+  price:
+    type: text
+    influence_conversation: true
+  ram:
+    type: text
+    influence_conversation: true
+  camera:
+    type: text
+    influence_conversation: true
+  storage:
+    type: text
+    influence_conversation: true
+  battery:
+    type: text
+    influence_conversation: true
+  display:
+    type: bool
+    influence_conversation: true
+  network:
+    type: bool
+    influence_conversation: true
+  stockandroid:
+    type: bool
+    influence_conversation: true
+responses:
+  utter_welcome:
+  - text: Hey! How can i help you?
+  utter_ask_continue:
+  - text: Are your sure?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_agree:
+  - text: i will definitely help you.
+  utter_ask_price:
+  - text: What is your budget?
+  utter_ask_ram:
+  - text: How much ram do you want?
+  utter_ask_camera:
+  - text: How much megapixel camera are you looking at?
+  utter_ask_storage:
+  - text: What's your preferred storage size?
+  utter_ask_battery:
+  - text: What's the minimum battery you want?
+  utter_chitchat/ask_name:
+  - text: My name is Rasa bot! Is there anything that i can help you with?
+  utter_chitchat/ask_location:
+  - text: I live in the cloud! How may i help you?
+  utter_chitchat/ask_random:
+  - text: Sorry! I didn't understand. I will try to improve my skills!
+  utter_details_thanks_phone:
+  - text: You searched for a {category} priced within Rs.{price} having {ram}GB ram, {camera}MP camera, {storage}GB storage and {battery}mAh battery !
+  utter_details_thanks_tablet:
+  - text: You searched for a {category} priced within Rs.{price} having {ram}GB ram, and {storage}GB storage!
+  utter_out_of_scope:
+  - text: Sorry. I din't get you.
+actions:
+- action_ask_display
+- action_ask_network
+- action_ask_stockandroid
+- action_reset_all_slots
+- action_search_results
+- action_submit
+- submit_convo_form
+- utter_ask_continue
+- utter_chitchat
+- utter_goodbye
+- utter_iamabot
+- utter_welcome
+- validate_product_details_form
+forms:
+  product_details_form:
+    required_slots:
+      category:
+      - type: from_entity
+        entity: category
+      stockandroid:
+      - type: from_text
+      display:
+      - type: from_text
+      network:
+      - type: from_text
+      price:
+      - type: from_entity
+        entity: price
+      ram:
+      - type: from_entity
+        entity: ram
+      camera:
+      - type: from_entity
+        entity: camera
+      storage:
+      - type: from_entity
+        entity: storage
+      battery:
+      - type: from_entity
+        entity: battery

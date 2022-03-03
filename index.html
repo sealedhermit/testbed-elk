@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rasa bot</title>
+</head>
+<body>
+  <script>!(function () {
+    let e = document.createElement("script"),
+      t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+      "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+      // Replace 1.x.x with the version that you want
+      (e.async = !0),
+      (e.onload = () => {
+        window.WebChat.default(
+          {
+            customData: { language: "en" },
+            socketUrl: "https://rasa-sealedhermit.cloud.okteto.net/",
+            title: "Rasa AI bot",
+            subtitle: "Say hi to begin the chat..",
+            welcomeMessage: "test",
+            inputTextFieldHint: "Type a message...",
+            connectingText: "Waiting for server...",
+            
+            // add other props here
+          },
+          null
+        );
+      }),
+      t.insertBefore(e, t.firstChild);
+  })();
+  localStorage.clear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,891 @@
+version: "2.0"
+
+stories:
+
+- story: User greets 
+  steps:
+  - intent: greet
+  - action: utter_welcome
+
+- story: User interrupts the form and doesn't want to continue
+  steps:
+  - intent: product_type
+  - action: product_details_form
+  - active_loop: product_details_form
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_reset_all_slots
+
+
+ 
+
+  #- or:
+    #- intent: stop
+    #- intent: affirm
+  #- action: action_deactivate_loop
+  #- active_loop: null
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_type
+    entities:
+    - category: phone
+  - slot_was_set:
+    - category: phone
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - requested_slot: price
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_goodbye
+  - action: action_reset_all_slots
+
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_type
+    entities:
+    - category: phone
+  - slot_was_set:
+    - category: phone
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - price: 10000 rupees
+  - slot_was_set:
+    - price: 10000 rupees
+  - slot_was_set:
+    - requested_slot: ram
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: utter_goodbye
+  - action: action_reset_all_slots
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_type
+    entities:
+    - category: phone
+    - price: 40000 rupees
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - price: 40000 rupees
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - price: 40000 rupees
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - price: 40000 rupees
+  - slot_was_set:
+    - requested_slot: display
+  - slot_was_set:
+    - display: true
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: 8GB RAM
+  - slot_was_set:
+    - ram: 8
+  - slot_was_set:
+    - requested_slot: camera
+  - slot_was_set:
+    - camera: 48 megapixel
+  - slot_was_set:
+    - camera: 48
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: 128GB storage
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: battery
+  - slot_was_set:
+    - battery: 4500mah
+  - slot_was_set:
+    - battery: 4500
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_storage
+    entities:
+    - category: phone
+    - storage: 128GB storage
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - storage: 128GB storage
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: display
+  - slot_was_set:
+    - display: true
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - price: 40000 rupees
+  - slot_was_set:
+    - price: 40000 rupees
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: 8GB RAM
+  - slot_was_set:
+    - ram: 8
+  - slot_was_set:
+    - requested_slot: camera
+  - slot_was_set:
+    - camera: 48 megapixel
+  - slot_was_set:
+    - camera: 48
+  - slot_was_set:
+    - requested_slot: battery
+  - slot_was_set:
+    - battery: 4500mah
+  - slot_was_set:
+    - battery: 4500
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_ram
+    entities:
+    - category: phone
+    - ram: 8GB RAM
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - ram: 8GB RAM
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - ram: 8
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - ram: 8
+  - slot_was_set:
+    - requested_slot: display
+  - slot_was_set:
+    - display: true
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - price: 40000 rupees
+  - slot_was_set:
+    - price: 40000 rupees
+  - slot_was_set:
+    - requested_slot: camera
+  - slot_was_set:
+    - camera: 48 megapixel
+  - slot_was_set:
+    - camera: 48
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: 128GB
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: battery
+  - slot_was_set:
+    - battery: 4500mah
+  - slot_was_set:
+    - battery: 4500
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_type
+    entities:
+    - category: phone
+  - slot_was_set:
+    - category: phone
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - price: 40000 rupees
+  - slot_was_set:
+    - price: 40000
+  - slot_was_set:
+    - requested_slot: display
+  - slot_was_set:
+    - display: true
+  - slot_was_set:
+    - requested_slot: camera
+  - slot_was_set:
+    - camera: 48 megapixel camera
+  - slot_was_set:
+    - camera: 48
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: 128gb storage
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: 8gb ram
+  - slot_was_set:
+    - ram: 8
+  - slot_was_set:
+    - requested_slot: battery
+  - slot_was_set:
+    - battery: 4500mah battery
+  - slot_was_set:
+    - battery: 4500
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_storage
+    entities:
+    - category: phone
+    - ram: 8gb
+    - storage: 128gb storage
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - ram: 8gb
+  - slot_was_set:
+    - storage: 128gb storage
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - ram: 8
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - ram: 8
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - price: 40000 rupees
+  - slot_was_set:
+    - price: 40000
+  - slot_was_set:
+    - requested_slot: display
+  - slot_was_set:
+    - display: false
+  - slot_was_set:
+    - requested_slot: camera
+  - slot_was_set:
+    - camera: 48 megapixel
+  - slot_was_set:
+    - camera: 48
+  - slot_was_set:
+    - requested_slot: battery
+  - slot_was_set:
+    - battery: 4500mah
+  - slot_was_set:
+    - battery: 4500
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_type
+    entities:
+    - category: phone
+  - slot_was_set:
+    - category: phone
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - price: '20000'
+  - slot_was_set:
+    - price: 20000
+  - slot_was_set:
+    - requested_slot: display
+  - slot_was_set:
+    - display: true
+  - slot_was_set:
+    - requested_slot: camera
+  - slot_was_set:
+    - camera: '48'
+  - slot_was_set:
+    - camera: 48
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: '128'
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: '6'
+  - slot_was_set:
+    - ram: 6
+  - slot_was_set:
+    - requested_slot: battery
+  - intent: product_battery
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_type
+    entities:
+    - category: phone
+  - slot_was_set:
+    - category: phone
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - price: '20000'
+  - slot_was_set:
+    - price: 20000
+  - slot_was_set:
+    - requested_slot: display
+  - slot_was_set:
+    - display: true
+  - slot_was_set:
+    - requested_slot: camera
+  - slot_was_set:
+    - camera: '48'
+  - slot_was_set:
+    - camera: 48
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: '128'
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: '6'
+  - slot_was_set:
+    - ram: 6
+  - slot_was_set:
+    - requested_slot: battery
+  - slot_was_set:
+    - battery: '4500'
+  - slot_was_set:
+    - battery: 4500
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_type
+    entities:
+    - category: tablet
+  - slot_was_set:
+    - category: tablet
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - price: '30000'
+  - slot_was_set:
+    - price: 30000
+  - slot_was_set:
+    - requested_slot: network
+  - slot_was_set:
+    - network: true
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: '128'
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: '6'
+  - slot_was_set:
+    - ram: 6
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: utter_goodbye
+  - action: action_reset_all_slots
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_budget
+    entities:
+    - category: tablet
+    - price: priced under
+    - price: 20000 rs
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - price: 20000 rs
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - price: 20000
+  - slot_was_set:
+    - requested_slot: network
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - price: 1000000
+  - slot_was_set:
+    - requested_slot: network
+  - slot_was_set:
+    - network: true
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: 64gb
+  - slot_was_set:
+    - storage: 64
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: 4gb
+  - slot_was_set:
+    - ram: 4
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_budget
+    entities:
+    - category: tablet
+    - price: priced
+    - price: rs
+    - price: '20000'
+    - storage: 64gb storage
+    - ram: 4gb ram
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - price: '20000'
+  - slot_was_set:
+    - ram: 4gb ram
+  - slot_was_set:
+    - storage: 64gb storage
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - price: 20000
+  - slot_was_set:
+    - ram: 4
+  - slot_was_set:
+    - storage: 64
+  - slot_was_set:
+    - requested_slot: network
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - price: 1000000
+  - slot_was_set:
+    - ram: 4
+  - slot_was_set:
+    - storage: 64
+  - slot_was_set:
+    - requested_slot: network
+  - slot_was_set:
+    - network: true
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_budget
+    entities:
+    - category: phone
+    - price: 40000 rs
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - price: 40000 rs
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - price: 40000
+  - slot_was_set:
+    - requested_slot: stockandroid
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - price: 40000
+  - slot_was_set:
+    - requested_slot: stockandroid
+  - slot_was_set:
+    - stockandroid: false
+  - slot_was_set:
+    - requested_slot: display
+  - slot_was_set:
+    - display: true
+  - slot_was_set:
+    - requested_slot: camera
+  - slot_was_set:
+    - camera: 48mp
+  - slot_was_set:
+    - camera: 48
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: 128gb
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: 8gb
+  - slot_was_set:
+    - ram: 8
+  - slot_was_set:
+    - requested_slot: battery
+  - slot_was_set:
+    - battery: 4500mah
+  - slot_was_set:
+    - battery: 4500
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_budget
+    entities:
+    - category: tablet
+    - price: rs 20000
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - price: rs 20000
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - price: 20000
+  - slot_was_set:
+    - requested_slot: network
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - price: 20000
+  - slot_was_set:
+    - requested_slot: network
+  - slot_was_set:
+    - network: true
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: 64gb
+  - slot_was_set:
+    - storage: 64
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: 4gb
+  - slot_was_set:
+    - ram: 4
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_welcome
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_budget
+    entities:
+    - category: phone
+    - price: 40000 rs
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - price: 40000 rs
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - price: 40000
+  - slot_was_set:
+    - requested_slot: stockandroid
+  - slot_was_set:
+    - category: phone
+  - slot_was_set:
+    - price: 40000
+  - slot_was_set:
+    - requested_slot: stockandroid
+  - slot_was_set:
+    - stockandroid: false
+  - slot_was_set:
+    - requested_slot: display
+  - slot_was_set:
+    - display: true
+  - slot_was_set:
+    - requested_slot: camera
+  - slot_was_set:
+    - camera: 48 mp
+  - slot_was_set:
+    - camera: 48
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: 128gb
+  - slot_was_set:
+    - storage: 128
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: 4gb
+  - slot_was_set:
+    - ram: 4
+  - slot_was_set:
+    - requested_slot: battery
+  - slot_was_set:
+    - battery: 4500mah
+  - slot_was_set:
+    - battery: 4500
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_welcome
+  - intent: product_type
+    entities:
+    - category: tablet
+  - slot_was_set:
+    - category: tablet
+  - action: product_details_form
+  - active_loop: product_details_form
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - category: tablet
+  - slot_was_set:
+    - requested_slot: price
+  - slot_was_set:
+    - price: 20000rs
+  - slot_was_set:
+    - price: 20000
+  - slot_was_set:
+    - requested_slot: storage
+  - slot_was_set:
+    - storage: 64gb
+  - slot_was_set:
+    - storage: 64
+  - slot_was_set:
+    - requested_slot: ram
+  - slot_was_set:
+    - ram: 4gb
+  - slot_was_set:
+    - ram: 4
+  - slot_was_set:
+    - requested_slot: network
+  - slot_was_set:
+    - network: true
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
+  - action: submit_convo_form
+  - action: action_search_results
+  - action: action_reset_all_slots
