@@ -40,5 +40,5 @@ event_broker:
   username: guest
   password: guest
   queues:
-     - ${RABBITMQ_QUEUE}
+     - rasa_production_events
      - elk_log
