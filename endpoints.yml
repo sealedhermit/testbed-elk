@@ -35,10 +35,9 @@ action_endpoint:
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers
 
-event_broker:
-  url: "rabbit-15672-testbedelk-sealedhermit.cloud.okteto.net"
-  username: guest
-  password: $guest
-  queues:
-     - rasa_production_events
-     - elk_log
+#event_broker:
+  #url: "rabbit-15672-testbedelk-sealedhermit.cloud.okteto.net"
+  #username: guest
+  #password: $guest
+  #queues:
+     
