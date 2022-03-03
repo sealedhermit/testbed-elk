@@ -33,6 +33,7 @@ services:
     env_file: .env
     networks:
     - all
+  
   elasticsearch:
     image: elasticsearch:7.9.2
     ports:
@@ -60,6 +61,23 @@ services:
         #source: ./logstash_pipeline/
         #target: /usr/share/logstash/pipeline
     read_only: true
+
+
+  rabbit:
+    restart: always
+    image: "bitnami/rabbitmq:3.7.17"
+    environment:
+      RABBITMQ_HOST: "rabbit"
+      RABBITMQ_USERNAME: "user"
+      RABBITMQ_PASSWORD: $testbed
+      RABBITMQ_DISK_FREE_LIMIT: "{mem_relative, 0.1}"
+    expose:
+      - "5672"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+
 
 networks:
   all:
