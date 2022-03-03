@@ -69,7 +69,7 @@ services:
     environment:
       RABBITMQ_HOST: "rabbit"
       RABBITMQ_USERNAME: "guest"
-      RABBITMQ_PASSWORD: "guest"
+      RABBITMQ_PASSWORD: guest
       RABBITMQ_DISK_FREE_LIMIT: "{mem_relative, 0.1}"
     expose:
       - "5672"
