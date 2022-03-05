@@ -68,8 +68,8 @@ services:
     image: "bitnami/rabbitmq:3.7.17"
     environment:
       RABBITMQ_HOST: "rabbit"
-      RABBITMQ_USERNAME: "guest"
-      RABBITMQ_PASSWORD: guest
+      RABBITMQ_USERNAME: "admin"
+      RABBITMQ_PASSWORD: admin
       RABBITMQ_DISK_FREE_LIMIT: "{mem_relative, 0.1}"
     expose:
       - "5672"

@@ -46,8 +46,8 @@ action_endpoint:
 event_broker:
   type: "pika"
   url: rabbit
-  username: guest
-  password: guest
+  username: admin
+  password: admin
   queues: 
     - rasa_production_events
     - elk_log
