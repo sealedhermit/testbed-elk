@@ -45,7 +45,7 @@ action_endpoint:
 
 event_broker:
   type: "pika"
-  url: https://rabbit-15672-testbedelk-sealedhermit.cloud.okteto.net/
+  url: rabbit-15672-testbedelk-sealedhermit.cloud.okteto.net
   username: guest
   password: guest
   queues: 
