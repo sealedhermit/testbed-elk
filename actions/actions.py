@@ -53,7 +53,7 @@ def create_convo_record(category,price,storage,ram,battery):
     print(f"Response status code: {response.status_code}")
     return response
 
-    }
+    
 
 class SubmitConvoForm(Action):
 
