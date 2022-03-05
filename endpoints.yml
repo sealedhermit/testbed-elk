@@ -11,7 +11,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 action_endpoint:
-  url: "http://rasa-actions:5055/webhook"
+  url: "http://localhost:5055/webhook"
 
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
@@ -26,7 +26,15 @@ action_endpoint:
 #    use_ssl: <whether or not the communication is encrypted, default false>
 
 #tracker_store:
-#    type: mongod
+    #type: SQL
+    #dialect: "sqlite"
+    #url: "sqlite:///./chat.db"
+    #db: "chat.db"
+    #username:
+    #password:
+    #query:
+      #driver:my-driver
+
 #    url: <url to your mongo instance, e.g. mongodb://localhost:27017>
 #    db: <name of the db within your mongo instance, e.g. rasa>
 #    username: <username used for authentication>
@@ -35,9 +43,11 @@ action_endpoint:
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers
 
-#event_broker:
-  #url: "rabbit-15672-testbedelk-sealedhermit.cloud.okteto.net"
-  #username: guest
-  #password: $guest
-  #queues:
-     
+event_broker:
+  type: "pika"
+  url: https://rabbit-15672-testbedelk-sealedhermit.cloud.okteto.net/
+  username: guest
+  password: guest
+  queues: 
+    - rasa_production_events
+    - elk_log
