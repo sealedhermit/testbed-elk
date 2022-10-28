@@ -10,7 +10,7 @@ services:
     - ./actions:/app/actions
     - ./data:/app/data
     - ./tests:/app/tests
-    command: bash -c "rm -rf models/* && rasa train && rasa run --enable-api --cors \"*\" --debug"
+    command: bash -c "rm -rf models/* && rasa train && rasa run --debug"
     ports:
     - '5006:5005'
     depends_on:
